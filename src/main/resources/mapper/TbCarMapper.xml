@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.salesManagement.dao.TbCarDao">
+
+    <resultMap id="TbCarResultMap" type="com.salesManagement.entity.TbCar">
+        <!-- 自动生成 -->
+        <id property="id" column="id" jdbcType="INTEGER"/>
+        <result property="model" column="model" jdbcType="VARCHAR"/>
+        <result property="color" column="color" jdbcType="VARCHAR"/>
+        <result property="price" column="price" jdbcType="DOUBLE"/>
+        <result property="stock" column="stock" jdbcType="INTEGER"/>
+        <result property="place" column="place" jdbcType="VARCHAR"/>
+        <result property="status" column="status" jdbcType="INTEGER"/>
+        <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+        <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+
+    <select id="select" resultMap="TbCarResultMap">
+		SELECT
+		*
+		FROM tb_car
+	</select>
+
+
+</mapper>
+
